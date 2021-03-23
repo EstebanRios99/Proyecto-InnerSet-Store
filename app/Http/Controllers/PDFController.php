@@ -21,7 +21,7 @@ class PDFController extends Controller
             DB::raw('SUM(total) as total'))
         ->where('date',">=", $date_start )
         ->where('date',"<=", $date_end )
-        ->where('status','=', 'delivered'  )
+        ->where('status', '=', 'delivered')
         ->groupBy('user_id')
          ->get();
         $users = User::all();

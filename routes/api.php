@@ -27,6 +27,7 @@ Route::group(['middleware' => ['cors']], function () {
     //verificar correo
     Route::name('verify')->get('users/verify/{code}', 'UserController@verify');
     Route::name('resent')->get('users/{user}/resend', 'UserController@resend');
+    Route::get('products', 'ProductController@index');
 
 
     Route::group(['middleware' => ['jwt.verify']], function () {
@@ -39,7 +40,7 @@ Route::group(['middleware' => ['cors']], function () {
         Route::put('categories/{category}', 'CategoryController@update');
         //Route::delete('categories/{category}', 'CategoryController@delete');
         //product
-        Route::get('products', 'ProductController@index');
+        //Route::get('products', 'ProductController@index');
         Route::get('products/{product}', 'ProductController@show');
         Route::get('product/{name}','ProductController@searchProduct');
         Route::post('products', 'ProductController@store');

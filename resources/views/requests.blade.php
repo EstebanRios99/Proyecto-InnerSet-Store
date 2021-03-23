@@ -41,7 +41,6 @@
             <th scope="col">Subtotal</th>
             <th scope="col">Recargo</th>
             <th scope="col">Total</th>
-            <th scope="col">Estado</th>
         </tr>
         </thead>
         <tbody>
@@ -57,7 +56,6 @@
                 <td>{{($request->subtotal)}}</td>
                 <td>{{$request->surcharge}}</td>
                 <td>{{$request->total}}</td>
-                <td>{{$request->status}}</td>
             </tr>
         @endforeach
         </tbody>
