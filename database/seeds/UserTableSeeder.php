@@ -19,18 +19,18 @@ class UserTableSeeder extends Seeder
         User::truncate();
         $faker = \Faker\Factory::create();
 
-        $password = Hash::make('123123');
-        $owner = Owner::create(['store_name' => 'Los Bajitos']);
+        $password = Hash::make('viveresdaniela');
+        $owner = Owner::create(['store_name' => 'Viveres Daniela']);
         $owner->user()->create([
-            'name' => 'Administrador',
-            'email' => 'admin@prueba.com',
+            'name' => 'Pablo Ríos',
+            'email' => 'viveresdani@gmail.com',
             'password' => $password,
             'role' => 'ROLE_ADMIN',
             'active' => true,
             'activation_code' => ' ',
         ]);
 
-        // Generar algunos usuarios para nuestra aplicacion
+        /* Generar algunos usuarios para nuestra aplicacion
         for ($i = 0; $i < 10; $i++) {
             $client = Client::create([
                 'home_number' => $faker->numberBetween(1, 30),
@@ -44,6 +44,6 @@ class UserTableSeeder extends Seeder
                 'activation_code'=> $faker->slug,
             ]);
 
-        }
+        }*/
     }
 }

@@ -12,10 +12,11 @@ class CategorieTableSeeder extends Seeder
     public function run()
     {
         Category::truncate();
-        $faker = \Faker\Factory::create();
-        for ($i = 0; $i < 5; $i++) {
+        //$faker = \Faker\Factory::create();
+        $cat=array('Lacteos y Huevos','Frutas, Verduras y Legumbres','Carnes y Embutidos','Bebidas','Limpieza','Aceites', 'Granos', 'Dulces', 'Panadería y Pastas' );
+        for ($i = 0; $i < 9; $i++) {
             Category::create([
-                'name' => $faker->word
+                'name' => $cat[$i]
             ]);
         }
     }
